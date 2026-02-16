@@ -1,0 +1,244 @@
+:root {
+  --blue-dark: #24547c;
+  --blue-light: #82c2f0;
+  --pink: #f1a3c3;
+  --black: #01090f;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Montserrat";
+  background: var(--white);
+  color: var(--black);
+}
+header {
+  font-family: "Montserrat bold";
+  font-weight: 900;
+}
+h1,
+h2 {
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+.section__title {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-size: 32px;
+  margin-bottom: 16px;
+  color: var(--blue-light);
+}
+.hero {
+  position: relative; /* VIGTIG */
+  padding: 120px 40px;
+  color: white;
+}
+p {
+  font-family: "Montserrat";
+  font-weight: 300;
+}
+/* Knappen */
+.hero {
+  position: relative; /* VIGTIG */
+}
+
+/* Knappen */
+.hero-cta {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  z-index: 10;
+  background: #f1a3c3;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "montserrat";
+  transition: 0.3s ease;
+}
+
+.hero-cta:hover {
+  transform: translateY(-2px);
+  background-color: #ffe4f2;
+}
+
+.logo {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 110px; /* justér */
+  height: auto;
+  z-index: 10;
+}
+.logo:hover {
+  transform: translateY(-2px);
+}
+.logo2 {
+  width: 500px; /* justér */
+  height: auto;
+}
+.cards-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+.card-img {
+  width: 100%;
+  height: auto;
+  object-fit: unset;
+  border-radius: 12px;
+}
+/* Kun billeder inde i cards */
+.cards .card img,
+.card-img {
+  width: 100%;
+  height: auto; /* vigtig! */
+  object-fit: contain; /* viser hele billedet */
+  display: block;
+  border-radius: 12px;
+}
+
+.feature__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.highlight {
+  background: var(--blue-light);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 5rem 2rem;
+}
+
+.content img {
+  width: 100%;
+  border-radius: 12px;
+}
+.cta {
+  background: var(--pink);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+  font-family: "Montserrat";
+}
+
+@media (max-width: 768px) {
+  .cards-section {
+    grid-template-columns: 1fr;
+  }
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.site-header {
+  padding: 20px 40px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 110px; /* samme størrelse begge steder */
+  height: auto;
+  display: block;
+}
+.hero .logo {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 10;
+}
+
+.cta-button {
+  margin-left: auto;
+  background: var(--pink);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-family: "Montserrat";
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(16, 4, 8, 0.3);
+}
+.footerband {
+  color: white;
+  padding: 80px 0;
+}
+.footerband .logo {
+  position: static; /* vigtigt */
+}
+
+.footerband__inner {
+  padding-left: 0;
+}
+
+/* Venstre side */
+.footer-left {
+  max-width: 320px;
+}
+.footer-left img {
+  width: 150px; /* prøv 80–100px */
+  height: auto;
+  padding: 10px;
+  margin: 10px;
+}
+.footer-description {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Højre side */
+.footer-right {
+  display: flex;
+  gap: 60px;
+}
+
+.footer-col h4 {
+  font-size: 14px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.footer-col a,
+.footer-col p {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: white;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.footer-col a:hover {
+  opacity: 1;
+  color: #00cbfe;
+}

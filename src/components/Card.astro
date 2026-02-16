@@ -1,0 +1,29 @@
+---
+const { title, text, img } = Astro.props;
+---
+
+<article class="card">
+  <div class="card-media">
+    <img src={`/${img}`} alt={title} />
+  </div>
+
+  <h3>{title}</h3>
+  <p>{text}</p>
+</article>
+
+<style>
+  .card {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 18px;
+    background: #fff;
+  }
+  .card h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+  }
+  .card p {
+    margin: 0;
+    opacity: 0.85;
+  }
+</style>
